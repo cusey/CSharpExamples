@@ -12,6 +12,12 @@ namespace program
         {
             Console.WriteLine(" *** C# Tutorial ***");
 
+            Console.WriteLine("---1) CLASSES ---");
+
+            program.Classes.Animal cat = new program.Classes.Animal("Spot", 9);
+
+            Console.Write("Cat[ {0} ]", cat.ToString());
+
             Console.ReadKey();
         }
     }
