@@ -16,7 +16,12 @@ namespace program
 
             program.Classes.Animal cat = new program.Classes.Animal("Spot", 9);
 
-            Console.Write("Cat[ {0} ]", cat.ToString());
+            Console.Write("Cat[ {0} ] \n", cat.ToString());
+
+            cat.Age = -10;
+            cat.Name = "Sam";
+
+            Console.Write("Cat[ {0} ] \n", cat.ToString());
 
             Console.ReadKey();
         }

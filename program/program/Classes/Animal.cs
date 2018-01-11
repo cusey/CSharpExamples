@@ -11,6 +11,37 @@ namespace program.Classes
         private string name;
         private int age;
 
+        public String Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return this.age;
+            }
+            set
+            {
+                if(value >= 0)
+                {
+                    this.age = value;
+                }else
+                {
+                    this.age = 0;
+                }
+            }
+        }
+        
+
         public Animal(String name, int age)
         {
             this.name = name;
@@ -19,7 +50,7 @@ namespace program.Classes
       
         public override string ToString()
         {
-           return "Name : " + name + " Age : " + age;
+           return "Name : " + this.name + " Age : " + this.age ;
         }
 
 
