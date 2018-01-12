@@ -26,7 +26,7 @@ namespace program
 
             Console.Write("Cat[ {0} ] \n", animal.ToString());
 
-            Console.WriteLine("---1) GENERICS ---");
+            Console.WriteLine("---2) GENERICS ---");
 
             var resultPrinter = new program.Generics.ResultPrinter();
 
