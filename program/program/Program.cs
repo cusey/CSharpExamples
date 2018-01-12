@@ -8,20 +8,39 @@ namespace program
 {
     class Program
     {
+        public static int Data { get; private set; }
+        public static bool Success { get; private set; }
+
         static void Main(string[] args)
         {
             Console.WriteLine(" *** C# Tutorial ***");
 
             Console.WriteLine("---1) CLASSES ---");
 
-            program.Classes.Animal cat = new program.Classes.Animal("Spot", 9);
+            program.Classes.Animal animal = new program.Classes.Animal("Spot", 9);
 
-            Console.Write("Cat[ {0} ] \n", cat.ToString());
+            Console.Write("Cat[ {0} ] \n", animal.ToString());
 
-            cat.Age = -10;
-            cat.Name = "Sam";
+            animal.Age = -10;
+            animal.Name = "Sam";
 
-            Console.Write("Cat[ {0} ] \n", cat.ToString());
+            Console.Write("Cat[ {0} ] \n", animal.ToString());
+
+            Console.WriteLine("---1) GENERICS ---");
+
+            var resultStr = new program.Generics.Result<String>{ Success = true, Data = "John"};
+
+            Console.Write("Result[ {0}, {1} ] \n", resultStr.Success, resultStr.Data);
+
+            var resultInt = new program.Generics.Result<int> { Success = true, Data = 5 };
+
+            Console.Write("Result[ {0}, {1} ] \n", resultInt.Success, resultInt.Data);
+
+
+
+
+
+
 
             Console.ReadKey();
         }
