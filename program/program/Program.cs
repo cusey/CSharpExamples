@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace program
 {
@@ -36,8 +37,22 @@ namespace program
             var result2 = new program.Generics.Result<int,bool> { Success = true, Data = 5, Action=true };
             resultPrinter.Print(result2);
 
+            Console.WriteLine("---3) ATTRIBUTES ---");
+
+            var types = from t in Assembly.GetExecutingAssembly().GetTypes()
+                        where t.GetCustomAttributes<program.Attributes.AttributeSample>().Count() > 0
+                        select t;
 
 
+            foreach (var t in types)
+            {
+                Console.WriteLine(t.Name);
+
+                foreach(var p in t.GetRuntimeProperties())
+                {
+                    Console.WriteLine(p.Name);
+                }
+            }
 
 
 

@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AttributeSample.cs" />
+    <Compile Include="Attributes\AttributesTest.cs" />
     <Compile Include="Classes\Animal.cs" />
     <Compile Include="Generics\Result.cs" />
     <Compile Include="Generics\ResultPrinter.cs" />
