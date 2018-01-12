@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Classes\Animal.cs" />
     <Compile Include="Generics\Result.cs" />
+    <Compile Include="Generics\ResultPrinter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

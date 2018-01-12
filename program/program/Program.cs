@@ -28,13 +28,13 @@ namespace program
 
             Console.WriteLine("---1) GENERICS ---");
 
-            var result1 = new program.Generics.Result<String,int>{ Success = true, Data = "John", Action= 78};
+            var resultPrinter = new program.Generics.ResultPrinter();
 
-            Console.Write("Result[ Success : {0}, Data : {1} , Action : {2} ] \n", result1.Success, result1.Data, result1.Action);
+            var result1 = new program.Generics.Result<String,int>{ Success = true, Data = "John", Action= 78};
+            resultPrinter.Print(result1);
 
             var result2 = new program.Generics.Result<int,bool> { Success = true, Data = 5, Action=true };
-
-            Console.Write("Result[ Success : {0}, Data : {1} , Action : {2} ] \n", result2.Success, result2.Data, result2.Action);
+            resultPrinter.Print(result2);
 
 
 
