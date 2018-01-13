@@ -54,7 +54,35 @@ namespace program
                 }
             }
 
+            Console.WriteLine("---4) REFLECTION ---");
 
+            var assemblyRef = Assembly.GetCallingAssembly();
+            Console.WriteLine(assemblyRef.FullName);
+
+            var typesRef = assemblyRef.GetTypes();
+
+            foreach (var t in types)
+            {
+                Console.WriteLine("Types: " + t.Name);
+
+                var props = t.GetProperties();
+                foreach( var p in props)
+                {
+                    Console.WriteLine("\t Property: " + p.Name + " Property Type : " + p.PropertyType);
+                }
+
+                var fields = t.GetFields();
+                foreach( var f in fields)
+                {
+                    Console.WriteLine("\t Field: " + f.Name);
+                }
+
+                var methods = t.GetMethods();
+                foreach (var m in methods)
+                {
+                    Console.WriteLine("\t Method: "  +m.Name);
+                }
+            }
 
 
             Console.ReadKey();
