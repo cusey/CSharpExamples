@@ -45,6 +45,7 @@
     <Compile Include="Attributes\AttributeSample.cs" />
     <Compile Include="Attributes\AttributesTest.cs" />
     <Compile Include="Classes\Animal.cs" />
+    <Compile Include="Delegates\Square.cs" />
     <Compile Include="Generics\Result.cs" />
     <Compile Include="Generics\ResultPrinter.cs" />
     <Compile Include="Program.cs" />

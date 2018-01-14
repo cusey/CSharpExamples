@@ -7,8 +7,13 @@ using System.Reflection;
 
 namespace program
 {
+
     class Program
     {
+        static void Logger(string s)
+        {
+            Console.WriteLine(s);
+        }
         public static int Data { get; private set; }
         public static bool Success { get; private set; }
 
@@ -83,6 +88,15 @@ namespace program
                     Console.WriteLine("\t Method: "  +m.Name);
                 }
             }
+
+            Console.WriteLine("---5) DELEGATES ---");
+
+            program.Delegates.Square square = new program.Delegates.Square();
+
+            // Crate an instance of the delegate, pointing to the logging function.
+            // This delegate will then be passed to the Process() function.
+            program.Delegates.Square.LogHandler myLogger = new program.Delegates.Square.LogHandler(Logger);
+            square.Area(myLogger, 2);
 
 
             Console.ReadKey();
