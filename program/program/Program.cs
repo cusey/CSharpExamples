@@ -10,6 +10,7 @@ namespace program
 
     class Program
     {
+        delegate void Operaion(int num);
         static void Logger(string s)
         {
             Console.WriteLine(s);
@@ -97,6 +98,22 @@ namespace program
             // This delegate will then be passed to the Process() function.
             program.Delegates.Square.LogHandler myLogger = new program.Delegates.Square.LogHandler(Logger);
             square.Area(myLogger, 2);
+
+            Console.WriteLine("---6) ANONYMOUS METHODS AND LAMBDA EXPRESSIONS ---");
+
+            Operaion op1 = delegate (int num)
+            {
+                Console.WriteLine("{0} x 2 = {1}", num, num * 2);
+            };
+
+            op1(2);
+
+            Action<int> op2 = delegate (int num)
+            {
+                Console.WriteLine("{0} x 2 = {1}", num, num * 2);
+            };
+
+            op2(2);
 
 
             Console.ReadKey();
