@@ -131,6 +131,19 @@ namespace program
 
             Console.WriteLine(result);
 
+            Console.WriteLine("---9)  LINQ ---");
+
+            var sample = "I enjoy writing uber-software in C#";
+
+            var resultSample = from c in sample.ToLower()
+                               where c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
+                               select c;
+
+            foreach( var item in resultSample)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.ReadKey();
         }
     }
