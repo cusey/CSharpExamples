@@ -115,6 +115,12 @@ namespace program
 
             op2(2);
 
+            Console.WriteLine("---7) EVENTS ---");
+
+            var tower = new program.Events.ClockTower();
+            var john = new program.Events.Person("John", tower);
+
+            tower.ChimeFivePM();
 
             Console.ReadKey();
         }
