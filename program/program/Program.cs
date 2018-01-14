@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
+using program.ExtensionMethods;
 
 namespace program
 {
@@ -121,6 +122,14 @@ namespace program
             var john = new program.Events.Person("John", tower);
 
             tower.ChimeFivePM();
+
+            Console.WriteLine("---8) EXTENSION METHOD ---");
+
+            int i = 10;
+
+            bool result = i.IsGreaterThan(100);
+
+            Console.WriteLine(result);
 
             Console.ReadKey();
         }

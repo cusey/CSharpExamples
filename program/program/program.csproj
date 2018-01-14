@@ -49,6 +49,7 @@
     <Compile Include="Events\ClockTower.cs" />
     <Compile Include="Events\ClockTowerEventArgs.cs" />
     <Compile Include="Events\Person.cs" />
+    <Compile Include="ExtensionMethods\IntExtensions.cs" />
     <Compile Include="Generics\Result.cs" />
     <Compile Include="Generics\ResultPrinter.cs" />
     <Compile Include="Program.cs" />
